@@ -1,0 +1,63 @@
+<%  include partials/layout %>
+
+
+<div id="background">
+    <div id="btns">
+       <div class="topbtns">
+           <i id="msgbtn" class="far fa-comment-alt"></i>
+            <a href="/logout"><i class="fas fa-power-off"></i></a>
+       </div>
+       <div id="messageofuser" class="messageofuser">
+          
+           <div class="msguser">
+               
+               <div class="prflImgusermsg"><a href="/messages/"></a></div>
+               <div class="actualmsg">
+                <% users.forEach(function(userobject){ %>
+                    <% Object.keys(userobject.messages).forEach(function(username){ %>
+                        <%= username %> ---
+                        <%= userobject.messages[username][userobject.messages[username].length - 1]; %>
+                        <br>
+                    <% }) %>
+                <% }) %>
+               </div> <hr>
+               
+            </div>
+       
+       </div>
+    </div>
+
+    <div id="backgroundContainer">
+        <% users.forEach(function(user){ %>
+        <a href=<%= `/message/${user.username}` %>>
+        <div class="person">
+            <span class="logo"><%= user.username.substring(0, 1).toUpperCase()  %></span>
+            <%= user.username %>
+        </div>
+    </a>
+    <% }) %>   
+    </div>
+
+</div>
+
+<script>
+
+let msgbtn = document.querySelector('#msgbtn');
+let messageofuser = document.querySelector('#messageofuser');
+
+msgbtn.addEventListener('click', function(){
+    messageofuser.classList.toggle('messageofuser');
+    // if(messageofuser.classList.length === 0){
+    //     console.log(messageofuser.classList.length);
+    //     messageofuser.classList.add('messageofuser');
+    // }else{
+    //     messageofuser.classList.remove('messageofuser');
+    // }
+    
+    
+})
+
+
+</script>
+
+<% include partials/footer %>

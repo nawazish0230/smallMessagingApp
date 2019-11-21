@@ -1,0 +1,15 @@
+<% include partials/layout %>
+
+
+<div class="center">
+        <h1>Message page</h1>
+        <div class="username">
+            <%= `To: ${username}` %>
+        </div>
+        <form action="/message/<%= loggedInUser %>/<%= username %>" method="POST" class="messagepage">
+            <textarea name="message" id="" cols="30" rows="10"></textarea>
+            <input type="submit" value="Send">
+        </form>
+</div>
+
+<% include partials/footer %>

@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+  background: linear-gradient(to right bottom , rgb(190, 110, 190), rgb(83, 16, 83));
+}
+.container{
+  width: inherit;
+  height: inherit;
+  padding-top: 80px;
+}
+.container h1{
+  text-align: center;
+  color: #fff;
+}
+.container p{
+  text-align: center;
+  color: #fff;
+}
+.center{
+  padding: 25px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 40%;
+  min-height: 30%;
+}
+form input[type= 'text'],input[type= 'password']{
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 12px 0;
+  border: none;
+  outline: none;
+  border: 1px solid rgb(204, 76, 204);
+  border-radius: 5px;
+}
+form input[type = 'submit']{
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgb(168, 64, 187);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.bottom{
+  text-align: center;
+  margin: 14px 0;
+}
+/* message page */
+h1{
+  font-weight: 500;
+
+}
+.username{
+  padding: 8px;
+}
+.messagepage textarea{
+padding: 8px;
+border: none;
+border: 1px solid  rgb(168, 64, 187);
+outline: none;
+width: 100%;
+margin-bottom: 15px;
+border-radius: 8px;
+resize: none;
+}
+
+
+/* profile page styling */
+#background{
+  width: inherit;
+  height: inherit;
+  padding: 50px;
+}
+
+#btns{
+  /* background-color: red; */
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+
+.topbtns{
+  color: #fff;
+  margin-left: 380px;
+  font-size: 22px;
+  /* margin-right: 50px; */
+}
+.topbtns a{
+  color: #fff;
+  padding-right: 15px;
+}
+
+.msguser{
+  background-color: #fff;
+  width: 90%;
+ padding: 8px;
+overflow-y: scroll;
+height: 400px;
+}
+.prflImgusermsg{
+  /* background-color: aqua; */
+  
+}
+.actualmsg{
+  /* background-color: blue; */
+}
+.messageofuser{
+  display: none;
+}
+
+#backgroundContainer{
+  /* background-color: red; */
+  width: 60%;
+}

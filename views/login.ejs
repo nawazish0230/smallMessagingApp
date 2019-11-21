@@ -1,0 +1,16 @@
+<% include partials/layout %>
+
+<div class="container">
+        <h1>login page</h1>
+    <div class="center">
+        
+        <form action="/login" method="post">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input type="submit" value="Login">
+        </form>
+        <div class="bottom">Not having account ? <a href="/">Sign Up</a></div>
+    </div>
+</div>
+
+<% include partials/footer %>
